@@ -11,5 +11,6 @@ int main()
     cin >> num2;
     cout << "La suma de los numeros es: " << num1 + num2 << endl;
     cout << "La resta de los numeros es: " << num1 - num2 << endl;
+    cout << "La multiplicación de los numeros es: " << num1 * num2 << endl;
     return 0;
 }
