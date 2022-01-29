@@ -4,6 +4,9 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    int num1;
+    cout << "introduce el primer número para las operaciones matemáticas: ";
+    cin >> num1;
+
     return 0;
 }
