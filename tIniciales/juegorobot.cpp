@@ -42,7 +42,7 @@ int main(){
         case 'a':
             if(posX!=1)
             {
-             posX-=1;
+             posX-=1;up
             }
             break;
         case 'd':
