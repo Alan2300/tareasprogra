@@ -1,0 +1,12 @@
+Nombre: 
+Alan
+Numero de iteraciones a la izquierda: 
+3
+Numero de iteraciones a la derecha: 
+3
+Numero de iteraciones hacia arriba: 
+3
+Numero de iteraciones hacia abajo: 
+3
+Numero de iteraciones: 
+12

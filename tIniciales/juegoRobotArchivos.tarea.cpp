@@ -6,15 +6,15 @@ using namespace std;
 
 
 
-void SaveFile(string Nombre, char GameMap[5][5])
+void SaveFile(string Nombre, char GameMap[10][10])
 {
-    ofstream FileMap("MapaTarea.txt"); // abre el archivo
+    ofstream FileMap("Mapa.txt"); // abre el archivo
     if(FileMap.is_open())
     {
         FileMap << Nombre << endl;
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 10; i++)
         {
-            for(int j = 0; j < 5; j++)
+            for(int j = 0; j < 10; j++)
             {
                FileMap << GameMap[i][j];
             }
@@ -24,12 +24,12 @@ void SaveFile(string Nombre, char GameMap[5][5])
 
     FileMap.close(); // cierra el archivo
 }
-void DrawMap(int HeroPosX, int HeroPosY, char GameMap[5][5])
+void DrawMap(int HeroPosX, int HeroPosY, char GameMap[10][10])
 {
     GameMap[HeroPosX][HeroPosY] = 'R';
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < 10; i++)
     {
-        for(int j = 0; j < 5; j++)
+        for(int j = 0; j < 10; j++)
         {
             if (GameMap[i][j] == 'R' )
             {
@@ -45,12 +45,12 @@ void DrawMap(int HeroPosX, int HeroPosY, char GameMap[5][5])
         cout << endl;
     }
 }
-int PosicionRobot(char eje, char GameMap[5][5])
+int PosicionRobot(char eje, char GameMap[10][10])
 {
     int posicion=0;
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < 10; i++)
     {
-        for(int j = 0; j < 5; j++)
+        for(int j = 0; j < 10; j++)
         {
             if(GameMap[i][j] == 'R' && eje == 'x')
             {
@@ -66,9 +66,9 @@ int PosicionRobot(char eje, char GameMap[5][5])
     return posicion;
 }
 
-string OpenFile(char GameMap[5][5])
+string OpenFile(char GameMap[10][10])
 {
-    ifstream FileMap("MapaTarea.txt"); // abre el archivo
+    ifstream FileMap("Mapa.txt"); // abre el archivo
     string line;
     string name="No encontre nombre";
     int renglon = 0;
@@ -82,7 +82,7 @@ string OpenFile(char GameMap[5][5])
                 name = line; // Obtiene el nombre de jugador
             else
             {
-                for(int i = 0; i < 5; i++)
+                for(int i = 0; i < 10; i++)
                 {
                         GameMap[row][i] = line[i];
                 }
@@ -106,7 +106,7 @@ int main()
     int HeroPosY=0;
     bool isGameOver = false;
     char Input = ' ';
-    char GameMap[5][5];
+    char GameMap[10][10];
     string NamePlayer = "";
     // Obtiene el nombre del jugador
     NamePlayer = OpenFile(GameMap);
@@ -127,7 +127,7 @@ int main()
         switch (Input)
         {
             case 'd':
-                if(HeroPosY < 4)
+                if(HeroPosY < 9)
                     HeroPosY++;
                 break;
             case 'a':
@@ -139,7 +139,7 @@ int main()
                     HeroPosX--;
                 break;
             case 's':
-                if(HeroPosX < 4)
+                if(HeroPosX < 9)
                     HeroPosX++;
                 break;
             case 'p':

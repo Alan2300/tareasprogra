@@ -8,14 +8,14 @@ int main()
 
     while(Counter < 100)
     {
-        Counter = Counter + 1;
+        Counter += 1;
         cout << Counter << endl;
 
     }
 
 */
-/*
-    bool isHappy = true;
+
+/*    bool isHappy = true;
     char input = ' ';
 
     while(isHappy == true)
@@ -27,9 +27,9 @@ int main()
         if(input == 'F')
             isHappy = false;
     }
-*/
 
-    bool isHappy = false;
+*/
+/*    bool isHappy = false;
     char input  = ' ';
 
     do
@@ -40,11 +40,13 @@ int main()
 
         if(input == 'F')
             isHappy = false;
+        else if(input == 'T')
+            isHappy = true;
 
     } while(isHappy == true);
+*/
 
-
-/*    for(int i = 0; i < 10 ; i++)
+  /*  for(int i = 0; i < 10 ; i++)
     {
         cout << i << " ";
         if( i % 2 == 0)
@@ -56,14 +58,14 @@ int main()
         }
     }
 */
-/*
+
     float Grades[5] = { 3.14f, 7.12f, 10.0f, 0.98f, -1.34f};
 
     for(int j = 0; j < 5 ; j++)
     {
         cout << Grades[j] << endl;
     }
-*/
+
 
 
      return 0;
