@@ -7,6 +7,8 @@
 #include "datosSalas.h"
 #include "salasCine.h"
 #include "datosSalasCine.h"
+#include "asientosCine.h"
+#include "datosAsientosCine.h"
 
 using namespace std;
 int escribirOpcion();
@@ -39,7 +41,7 @@ int main()
                             break;
                         case asientos:
                             {
-                                cout <<"yey :)";
+                                asientosCine claseAsientos;
                             }
                             break;
                         case cines:
@@ -94,7 +96,7 @@ int escribirOpcion(){
 int escribirOpcionCatalogo(){
     system("cls");
     cout<<"\t\t\t---------------------------------"<<endl;
-    cout<<"\t\t\t |   CATALOGOS DEL SISTEMA  |"<<endl;
+    cout<<"\t\t\t |   ALAN ABIMAEL GALICIA RUANO; 9959-21-3632  |"<<endl;
     cout<<"\t\t\t---------------------------------"<<endl;
     cout<< "\n\n\t\t\t  1. Peliculas" << endl
     << "\t\t\t  2. Salas" << endl

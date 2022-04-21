@@ -73,7 +73,6 @@ salasCine::salasCine()
 
 }
 int opcionDepa(){
-    //system("cls");
 
     cout<<"\n\t\t\t---------------------------------"<<endl;
     cout<<"\t\t\t\t------------------"<<endl;

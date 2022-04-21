@@ -168,9 +168,9 @@ void modificarRegistroUs( fstream &verificarArchivoUsuario )
     int contador=0;
     bool ingresa = false;
     do{
-        cout<<"\t\t\t----------------------------------------------------"<<endl;
-        cout<<"\t\t\t |   INICIO DE SESION - SISTEMA RECURSOS HUMANOS  |"<<endl;
-        cout<<"\t\t\t----------------------------------------------------"<<endl;
+        cout<<"\t\t\t----------------------------------------------------------------"<<endl;
+        cout<<"\t\t\t |   INICIO DE SESION - ALAN ABIMAEL GALICIA RUANO 9959-21-3632  |"<<endl;
+        cout<<"\t\t\t----------------------------------------------------------------"<<endl;
 
         datosUsuariosCine usuarioos;
         int usuario = obtenernUsuario( "\n\t\t\tIngrese Usuario" );

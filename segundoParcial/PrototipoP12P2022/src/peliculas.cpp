@@ -74,7 +74,6 @@ peliculas::peliculas()
    } //FIN WHILE
 }
 int opcionEmp(){
-    //system("cls");
     cout<<"\n\t\t\t---------------------------------"<<endl;
     cout<<"\n\t\t\t\t------------------"<<endl;
 	cout<<"\t\t\t\t |   peliculas  |"<<endl;
