@@ -1,6 +1,8 @@
 #include <iostream>
 #include "usuariosCine.h"
 #include "datosUsuariosCine.h"
+#include "peliculas.h"
+#include "datosPeliculas.h"
 
 using namespace std;
 int escribirOpcion();
@@ -16,14 +18,14 @@ int main()
         switch ( opcion ) {
             case catalogos:
                 {
-                    enum OpcionesCatalogos { peliculas = 1, salas, asientos, cines, clientes, FIN };
+                    enum OpcionesCatalogos { peliculass = 1, salas, asientos, cines, clientes, FIN };
                     int opcionCatalogos=0;
                     while (( opcionCatalogos = escribirOpcionCatalogo() ) != FIN)
                     {
                         switch ( opcionCatalogos ) {
-                        case peliculas:
+                        case peliculass:
                             {
-                                cout <<"yey :)";
+                                peliculas peliculasclase;
                             }
                             break;
                         case salas:
