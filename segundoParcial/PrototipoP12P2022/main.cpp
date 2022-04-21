@@ -9,6 +9,8 @@
 #include "datosSalasCine.h"
 #include "asientosCine.h"
 #include "datosAsientosCine.h"
+#include "clientesCine.h"
+#include "datosClientesCine.h"
 
 using namespace std;
 int escribirOpcion();
@@ -51,7 +53,7 @@ int main()
                             break;
                         case clientes:
                             {
-                                cout <<"yey :)";
+                                clientesCine claseClientes;
                             }
                             break;
                             break;

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1650576310 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\main.cpp
+1650577880 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\main.cpp
 	<iostream>
 	"usuariosCine.h"
 	"datosUsuariosCine.h"
@@ -11,6 +11,8 @@
 	"datosSalasCine.h"
 	"asientosCine.h"
 	"datosAsientosCine.h"
+	"clientesCine.h"
+	"datosClientesCine.h"
 
 1650561029 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\usuarioscine.h
 
@@ -23,7 +25,7 @@
 	<cstring>
 	<iostream>
 
-1650576375 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\usuarioscine.cpp
+1650576956 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\usuarioscine.cpp
 	"usuariosCine.h"
 	"datosUsuariosCine.h"
 	<iostream>
@@ -45,7 +47,7 @@
 1650568005 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\peliculas.h
 	<iostream>
 
-1650576667 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\peliculas.cpp
+1650576956 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\peliculas.cpp
 	"peliculas.h"
 	"datosPeliculas.h"
 	<iostream>
@@ -86,7 +88,7 @@
 
 1650575065 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\salascine.h
 
-1650576667 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\salascine.cpp
+1650576956 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\salascine.cpp
 	"salasCine.h"
 	"datosSalasCine.h"
 	<iostream>
@@ -94,12 +96,12 @@
 	<iomanip>
 	<cstdlib>
 
-1650575408 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\asientoscine.h
+1650576956 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\asientoscine.h
 
-1650576256 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\datosasientoscine.h
+1650576956 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\datosasientoscine.h
 	<iostream>
 
-1650576667 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\asientoscine.cpp
+1650576956 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\asientoscine.cpp
 	"asientosCine.h"
 	"datosAsientosCine.h"
 	<iostream>
@@ -107,9 +109,28 @@
 	<iomanip>
 	<cstdlib>
 
-1650576234 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\datosasientoscine.cpp
+1650576956 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\datosasientoscine.cpp
 	"datosAsientosCine.h"
 	"asientosCine.h"
 	<cstring>
 	<iostream>
+
+1650577469 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\clientescine.h
+
+1650577880 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\datosclientescine.h
+	<iostream>
+
+1650577880 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\datosclientescine.cpp
+	"datosClientesCine.h"
+	"clientesCine.h"
+	<cstring>
+	<iostream>
+
+1650577969 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\clientescine.cpp
+	"clientesCine.h"
+	"datosClientesCine.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
 

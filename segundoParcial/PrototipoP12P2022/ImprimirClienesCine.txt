@@ -1,0 +1,2 @@
+Codigo    Nombre                 NIT
+1         Jose           1.02022e+08
