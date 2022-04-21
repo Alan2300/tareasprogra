@@ -32,7 +32,7 @@ int main()
                             break;
                         case salass:
                             {
-                                salas claseSala;
+                                cout <<"yey :)";
                             }
                             break;
                         case asientos:
@@ -42,7 +42,7 @@ int main()
                             break;
                         case cines:
                             {
-                                cout <<"yey :)";
+                                salas claseSala;
                             }
                             break;
                         case clientes:
