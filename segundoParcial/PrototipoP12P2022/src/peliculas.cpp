@@ -77,7 +77,7 @@ int opcionEmp(){
     //system("cls");
     cout<<"\n\t\t\t---------------------------------"<<endl;
     cout<<"\n\t\t\t\t------------------"<<endl;
-	cout<<"\t\t\t\t |   EMPLEADOS  |"<<endl;
+	cout<<"\t\t\t\t |   peliculas  |"<<endl;
 	cout<<"\t\t\t\t------------------"<<endl;
 
     cout<< "\n\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
