@@ -5,6 +5,8 @@
 #include "datosPeliculas.h"
 #include "salas.h"
 #include "datosSalas.h"
+#include "salasCine.h"
+#include "datosSalasCine.h"
 
 using namespace std;
 int escribirOpcion();
@@ -32,7 +34,7 @@ int main()
                             break;
                         case salass:
                             {
-                                cout <<"yey :)";
+                                salasCine claseSalasCin;
                             }
                             break;
                         case asientos:
