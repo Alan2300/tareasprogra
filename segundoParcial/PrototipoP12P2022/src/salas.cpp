@@ -77,7 +77,7 @@ salas::salas()
 int salas::escribirOption()
 {
     cout<<"\n\t\t\t   --------------------------"<<endl;
-	cout<<"\t\t\t    |   Modulo de Puestos  |"<<endl;
+	cout<<"\t\t\t    | ||||||||  CINES    |||||||| |"<<endl;
 	cout<<"\t\t\t   --------------------------"<<endl;
 
     cout<< "\n\n\t\t\t 1. Crear un archivo de texto para imprimir" << endl

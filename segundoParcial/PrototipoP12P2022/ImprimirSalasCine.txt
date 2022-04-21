@@ -1,0 +1,3 @@
+Codigo    Estatus           Asientos
+1         Habilitada      24            
+2         Habilitado      50            
