@@ -1,8 +1,10 @@
 # depslib dependency file v1.0
-1650561029 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\main.cpp
+1650566802 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\main.cpp
 	<iostream>
 	"usuariosCine.h"
 	"datosUsuariosCine.h"
+	"peliculas.h"
+	"datosPeliculas.h"
 
 1650561029 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\usuarioscine.h
 
@@ -21,6 +23,26 @@
 	<iostream>
 	<cstdlib>
 	<conio.h>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1650566494 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\datospeliculas.cpp
+	"datosPeliculas.h"
+	"peliculas.h"
+	<cstring>
+	<iostream>
+
+1650566511 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\datospeliculas.h
+	<iostream>
+
+1650566494 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\peliculas.h
+	<iostream>
+
+1650566616 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\peliculas.cpp
+	"peliculas.h"
+	"datosPeliculas.h"
+	<iostream>
 	<fstream>
 	<iomanip>
 	<cstdlib>
