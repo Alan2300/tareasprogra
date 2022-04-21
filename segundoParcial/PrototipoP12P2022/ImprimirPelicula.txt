@@ -1,1 +1,3 @@
 Codigo    Nombre          Clasificacion genero              precio
+1         Horror          B             Terrortù            25.00
+2         Fantasma        B             Terrortù            26.00

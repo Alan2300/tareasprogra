@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1650570265 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\main.cpp
+1650570514 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\main.cpp
 	<iostream>
 	"usuariosCine.h"
 	"datosUsuariosCine.h"
@@ -41,7 +41,7 @@
 1650568005 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\peliculas.h
 	<iostream>
 
-1650570265 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\peliculas.cpp
+1650570514 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\peliculas.cpp
 	"peliculas.h"
 	"datosPeliculas.h"
 	<iostream>
@@ -49,12 +49,12 @@
 	<iomanip>
 	<cstdlib>
 
-1650570265 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\salas.h
+1650570514 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\salas.h
 
-1650570265 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\datossalas.h
+1650570514 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\datossalas.h
 	<iostream>
 
-1650570265 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\datossalas.cpp
+1650570514 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\datossalas.cpp
 	"datosSalas.h"
 	<iostream>
 	<fstream>

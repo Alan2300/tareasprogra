@@ -104,7 +104,7 @@ void imprimirRegistroPuesto( fstream &leerDeArchivoP )
 
     } //FIN DE INSTRUCCION if
 
-    archivoImprimirSalidaP << left << setw( 10 ) << "Codigo" << setw( 16 )<< "Estatus" << setw( 14 ) << "Nombre" << endl;
+    archivoImprimirSalidaP << left << setw( 10 ) << "Codigo" << setw( 16 )<< "Direccion" << setw( 14 ) << "Nombre" << endl;
     leerDeArchivoP.seekg( 0 );
 
     datosSalas puestos;
@@ -148,7 +148,7 @@ void nuevoRegistroPuesto( fstream &insertarEnArchivo )
     if ( puestos.obtenerCodigoP() == 0 ) {
         char Estatus[ 15 ];
         char nombreP[ 10 ];
-        cout<<"Escriba el Estatus del cine: ";
+        cout<<"Escriba la Direccion del cine: ";
         cin>> setw( 15 ) >> Estatus;
         cout<<"Escriba el Nombre del cine: ";
         cin>> setw( 10 ) >> nombreP;
@@ -183,7 +183,7 @@ int obtenernCodigoPuesto( const char * const indicador )
 void modificarRegistroPuesto( fstream &actualizarArchivo )
 {
     int opcionAc=0;
-    cout<<"\nEscoja opcion a Actualizar: \n 1. Nombre\n 2. Estatus\n  R - ";
+    cout<<"\nEscoja opcion a Actualizar: \n 1. Nombre\n 2. Direccion\n  R - ";
     cin>>opcionAc;
 
     if (opcionAc== 1){
@@ -218,7 +218,7 @@ void modificarRegistroPuesto( fstream &actualizarArchivo )
 
         if (puestos.obtenerCodigoP() != 0 ) {
                 mostrarLineaP( cout, puestos );
-                cout << "\nEscriba el nuevo Estatus: ";
+                cout << "\nEscriba la nueva Direccion: ";
                 string Estatus;
                 cin >> Estatus;
 
@@ -258,7 +258,7 @@ void eliminarRegistroPuesto( fstream &eliminarDeArchivo )
 
 void consultarRegistroPuesto( fstream &leerDeArchivoP )
 {
-    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << "Estatus" << setw( 14 ) << " Nombre" << endl;
+    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << "Direccion" << setw( 14 ) << " Nombre" << endl;
     leerDeArchivoP.seekg( 0 );
     datosSalas puestos;
     leerDeArchivoP.read( reinterpret_cast< char * >( &puestos ), sizeof( datosSalas ) );
