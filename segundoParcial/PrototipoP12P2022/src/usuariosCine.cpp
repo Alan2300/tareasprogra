@@ -44,8 +44,8 @@ usuariosCine::usuariosCine()
         cout <<  "Archivo creado satisfactoriamente, pruebe de nuevo\n";
         exit ( 1 );
     }
-    /*modificarRegistroUs(creditoEntradaSalida);*/
-    enum Opciones { agregar = 1, nuevo, FIN };
+    modificarRegistroUs(creditoEntradaSalida);
+    /*enum Opciones { agregar = 1, nuevo, FIN };
     int opcion;
     while ( ( opcion = opcionUs() ) != FIN ) {
         switch ( opcion ) {
@@ -75,9 +75,9 @@ int opcionUs(){
    int opcionMenu;
    cin >> opcionMenu;
 
-   return opcionMenu;
+   return opcionMenu;*/
 }
-void imprimirRegistroUs( fstream &leerDeArchivo )
+/*void imprimirRegistroUs( fstream &leerDeArchivo )
 {
     ofstream archivoImprimirSalida( "ImprimirUsuarios.txt", ios::out );
     if ( !archivoImprimirSalida ) {
@@ -98,13 +98,13 @@ void imprimirRegistroUs( fstream &leerDeArchivo )
         leerDeArchivo.read( reinterpret_cast< char * >( &usuario ), sizeof( datosUsuariosCine ) );
     } //FIN DE WHILE
 
-} //FIN DE LA FUNCION -IMPRIMIR REGISTRO-
-void mostrarLineaUs( ostream &salida, const datosUsuariosCine &registro )
+} //FIN DE LA FUNCION -IMPRIMIR REGISTRO-*/
+/*void mostrarLineaUs( ostream &salida, const datosUsuariosCine &registro )
 {
    salida << left << setw( 10 ) << registro.obtenerUsuario()
           << setw( 16 ) << setprecision( 2 ) << right << fixed<< showpoint << registro.obtenerContra() << endl;
 
-}//FIN -MOSTRARLINEA-
+}//FIN -MOSTRARLINEA-*/
 void crearArchivoCreditoUs()
 {
     ofstream creditoSalida( "usuario.dat", ios::out | ios::binary );
@@ -116,7 +116,7 @@ void crearArchivoCreditoUs()
     for ( int i = 0; i < 100; i++ )
         creditoSalida.write(reinterpret_cast< const char * >( &usuarioEnBlanco ), sizeof( datosUsuariosCine ) );
 }
-void nuevoRegistroUs( fstream &insertarEnArchivo )
+/*void nuevoRegistroUs( fstream &insertarEnArchivo )
 {
     int usuario = obtenernUsuario( "\nEscriba el Usuario " );
     insertarEnArchivo.seekg( ( usuario - 1 ) * sizeof( datosUsuariosCine ) );
@@ -138,7 +138,7 @@ void nuevoRegistroUs( fstream &insertarEnArchivo )
     else
         cerr << "El Usuario #" << usuario << " ya contiene informacion.\n" << endl;
 
-}
+}*/
 int obtenernUsuario( const char * const indicador )
 {
    int usuario;

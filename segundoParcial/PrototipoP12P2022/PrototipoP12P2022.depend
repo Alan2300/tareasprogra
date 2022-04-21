@@ -1,21 +1,21 @@
 # depslib dependency file v1.0
-1650560596 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\main.cpp
+1650561029 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\main.cpp
 	<iostream>
 	"usuariosCine.h"
 	"datosUsuariosCine.h"
 
-1650559776 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\usuarioscine.h
+1650561029 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\usuarioscine.h
 
-1650560596 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\datosusuarioscine.h
+1650561029 c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\include\datosusuarioscine.h
 	<iostream>
 
-1650560596 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\datosusuarioscine.cpp
+1650561029 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\datosusuarioscine.cpp
 	"datosUsuariosCine.h"
 	"usuariosCine.h"
 	<cstring>
 	<iostream>
 
-1650560721 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\usuarioscine.cpp
+1650561634 source:c:\users\abima\proyectos\tareasgit\tareasprogra\segundoparcial\prototipop12p2022\src\usuarioscine.cpp
 	"usuariosCine.h"
 	"datosUsuariosCine.h"
 	<iostream>
