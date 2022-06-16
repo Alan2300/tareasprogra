@@ -113,7 +113,7 @@
 
 1655412545 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\marcas.h
 
-1655413211 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\marcas.cpp
+1655416179 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\marcas.cpp
 	"Marcas.h"
 	"DatosMarcas.h"
 	<iostream>
@@ -136,7 +136,7 @@
 
 1655413903 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\lineas.h
 
-1655414578 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\lineas.cpp
+1655416179 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\lineas.cpp
 	"Lineas.h"
 	"DatosLineas.h"
 	<iostream>
@@ -158,7 +158,7 @@
 
 1655414808 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\producto.h
 
-1655415464 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\producto.cpp
+1655416179 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\producto.cpp
 	"Producto.h"
 	"DatosProducto.h"
 	<iostream>

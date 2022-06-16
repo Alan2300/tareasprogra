@@ -112,10 +112,10 @@ int opcionEmpre(){
     cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
 
-    cout<<"\n\t\t\t-----------------------------------------------"<<endl;
-    cout<<"\t\t\t\t     -----------------"<<endl;
-	cout<<"\t\t\t\t      |   EMPRESAS  |"<<endl;
-	cout<<"\t\t\t\t     -----------------"<<endl;
+    cout<<"\n\t\t\t-----------------------------------------------";
+    cout<<"\n\t\t\t\t   ----------------------------------------------"<<endl;
+	cout<<"\t\t\t\t      |   Alan Abimael Galicia Ruano 9959213632   |"<<endl;
+	cout<<"\t\t\t\t     ----------------------------------------------"<<endl;
 
     cout<< "\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
         << "\t\t\t 2. Agregar Producto" << endl

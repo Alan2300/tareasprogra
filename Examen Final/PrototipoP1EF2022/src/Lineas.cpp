@@ -107,10 +107,10 @@ int escribirOption()
     cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
     cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
-    cout<<"\n\t\t\t-----------------------------------------------"<<endl;
-    cout<<"\t\t\t\t       ----------------"<<endl;
-	cout<<"\t\t\t\t        |   PUESTOS  |"<<endl;
-	cout<<"\t\t\t\t       ----------------"<<endl;
+    cout<<"\n\t\t\t-----------------------------------------------";
+    cout<<"\n\t\t\t\t   ----------------------------------------------"<<endl;
+	cout<<"\t\t\t\t      |   Alan Abimael Galicia Ruano 9959213632   |"<<endl;
+	cout<<"\t\t\t\t     ----------------------------------------------"<<endl;
 
     cout<< "\n\n\t\t\t 1. Crear un archivo de texto para imprimir" << endl
         << "\t\t\t 2. Crear una nueva linea" << endl

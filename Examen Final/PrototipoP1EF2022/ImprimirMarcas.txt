@@ -1,0 +1,2 @@
+Codigo    Nombre                       Estatus
+1         Adidas          Habilitada          

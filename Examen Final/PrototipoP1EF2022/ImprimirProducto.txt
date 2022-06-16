@@ -1,0 +1,2 @@
+Codigo                  Nombre  Cantidad
+1         Tennisosto                1200
