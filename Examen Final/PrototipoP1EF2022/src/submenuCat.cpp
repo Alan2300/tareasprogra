@@ -1,6 +1,8 @@
 #include "submenuCat.h"
 #include "clientes.h"
 #include "Vendedores.h"
+#include "Marcas.h"
+#include "Lineas.h"
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -28,12 +30,12 @@ submenuCat::submenuCat()
             break;
             case marca:
                 {
-                    cout<<"yayaya"<<endl;
+                    Marcas claseMarcas;
                 }
             break;
             case linea:
                 {
-                    cout<<"yayaya"<<endl;
+                    Lineas claseLineas;
                 }
             break;
             case producto:

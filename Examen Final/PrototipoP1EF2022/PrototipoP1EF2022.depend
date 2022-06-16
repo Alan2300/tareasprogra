@@ -33,10 +33,12 @@
 
 1655402223 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\submenucat.h
 
-1655411728 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\submenucat.cpp
+1655414475 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\submenucat.cpp
 	"submenuCat.h"
 	"clientes.h"
 	"Vendedores.h"
+	"Marcas.h"
+	"Lineas.h"
 	<iostream>
 	<ctime>
 	<vector>
@@ -98,4 +100,49 @@
 	<fstream>
 	<iomanip>
 	<cstdlib>
+
+1655413211 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\datosmarcas.cpp
+	"DatosMarcas.h"
+	"Marcas.h"
+	<cstring>
+	<iostream>
+
+1655413252 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\datosmarcas.h
+	<iostream>
+
+1655412545 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\marcas.h
+
+1655413211 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\marcas.cpp
+	"Marcas.h"
+	"DatosMarcas.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1655414456 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\datoslineas.cpp
+	"DatosLineas.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+
+1655414456 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\datoslineas.h
+	<iostream>
+
+1655413903 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\lineas.h
+
+1655414578 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\lineas.cpp
+	"Lineas.h"
+	"DatosLineas.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<vector>
 
