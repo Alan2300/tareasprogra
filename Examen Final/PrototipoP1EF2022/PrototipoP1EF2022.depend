@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1655398733 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\datosusuario.cpp
+1655400809 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\datosusuario.cpp
 	"DatosUsuario.h"
 	"Usuarios.h"
 	<cstring>
 	<iostream>
 
-1655398733 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\datosusuario.h
+1655400809 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\datosusuario.h
 	<iostream>
 
-1655398494 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\usuarios.h
+1655400809 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\usuarios.h
 
-1655398733 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\usuarios.cpp
+1655400809 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\src\usuarios.cpp
 	"Usuarios.h"
 	"DatosUsuario.h"
 	<iostream>
@@ -22,9 +22,12 @@
 	<iomanip>
 	<cstdlib>
 
-1655398766 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\main.cpp
+1655402013 source:c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\main.cpp
 	<iostream>
 	<ctime>
 	<vector>
 	"Usuarios.h"
+	"submenuCat.h"
+
+1655401488 c:\users\abima\proyectos\tareasgit\tareasprogra\examen final\prototipop1ef2022\include\submenucat.h
 

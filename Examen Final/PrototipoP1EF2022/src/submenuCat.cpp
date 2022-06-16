@@ -1,43 +1,51 @@
+#include "submenuCat.h"
 #include <iostream>
 #include <ctime>
 #include <vector>
 #include "Usuarios.h"
-#include "submenuCat.h"
 
 using namespace std;
 
-int escribirOpcion();
-enum Opciones { catalogos = 1, procesos, informes, FIN };
+int escribirOpcioncat();
+enum Opciones { clientes = 1, vendedores, marcas, lineas, productos, FIN };
 
-int main()
+submenuCat::submenuCat()
 {
-    Usuarios claseusuarios;
     int opcion=0;
-    while (( opcion = escribirOpcion() ) != FIN)
+    while (( opcion = escribirOpcioncat() ) != FIN)
     {
         switch ( opcion ) {
-            case catalogos:
+            case clientes:
                 {
-                    submenuCat claseMenuCat;
+                    cout<<"yayaya"<<endl;
                 }
             break;
-            case procesos:
+            case vendedores:
                 {
                     cout<<"yayaya"<<endl;
 
                 }
             break;
-            case informes:
+            case marcas:
+                {
+                    cout<<"yayaya"<<endl;
+                }
+            break;
+            case lineas:
+                {
+                    cout<<"yayaya"<<endl;
+                }
+            break;
+            case productos:
                 {
                     cout<<"yayaya"<<endl;
                 }
             break;
         }
     }
-    return 0;
 }
 
-int escribirOpcion(){
+int escribirOpcioncat(){
     system("cls");
     system("color F");
 
@@ -77,10 +85,12 @@ int escribirOpcion(){
 	cout<<"\t\t\t |   Alan Abimael Galicia Ruano |"<<endl;
 	cout<<"\t\t\t---------------------------------"<<endl;
 
-    cout<< "\n\t\t\t  1. Catálogo" << endl
-        << "\t\t\t  2. Procesos" << endl
-        << "\t\t\t  3. Informes" << endl
-        << "\t\t\t  4. Salir del sistema" << endl
+    cout<< "\n\t\t\t  1. clientes" << endl
+        << "\t\t\t  2. vendedores" << endl
+        << "\t\t\t  3. marcas" << endl
+        << "\t\t\t  4. lineas" << endl
+        << "\t\t\t  5. productos" << endl
+        << "\t\t\t  6. Regresar al menú general" << endl
         <<"\n\t\t\t---------------------------------"<<endl
         << "\n\t\t\tIngrese su opcion: ";
    int opcionMenu;
@@ -88,4 +98,8 @@ int escribirOpcion(){
 
    return opcionMenu;
 
+}
+submenuCat::~submenuCat()
+{
+    //dtor
 }
