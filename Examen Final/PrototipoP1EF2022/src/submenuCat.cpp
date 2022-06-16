@@ -3,6 +3,7 @@
 #include "Vendedores.h"
 #include "Marcas.h"
 #include "Lineas.h"
+#include "Producto.h"
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -10,7 +11,7 @@
 using namespace std;
 
 int escribirOpcioncat();
-enum Opciones { cliente = 1, vendedor, marca, linea, producto, FIN };
+enum Opciones { cliente = 1, vendedor, marca, linea, productos, FIN };
 
 submenuCat::submenuCat()
 {
@@ -38,9 +39,9 @@ submenuCat::submenuCat()
                     Lineas claseLineas;
                 }
             break;
-            case producto:
+            case productos:
                 {
-                    cout<<"yayaya"<<endl;
+                    Producto claseProducto;
                 }
             break;
         }

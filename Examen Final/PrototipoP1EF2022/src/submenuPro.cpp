@@ -84,11 +84,11 @@ int escribirOpcionpro(){
 	cout<<"\t\t\t |   Alan Abimael Galicia Ruano 9959213632 |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 
-    cout<< "\n\t\t\t  1. clientes" << endl
-        << "\t\t\t  2. vendedores" << endl
-        << "\t\t\t  3. marcas" << endl
-        << "\t\t\t  4. lineas" << endl
-        << "\t\t\t  5. productos" << endl
+    cout<< "\n\t\t\t  1. ventas Encabezado" << endl
+        << "\t\t\t  2. Ventas Detalle" << endl
+        << "\t\t\t  3. Bodegas" << endl
+        << "\t\t\t  4. Compra Detalle" << endl
+        << "\t\t\t  5. Compras Encabezado" << endl
         << "\t\t\t  6. Regresar al menú general" << endl
         <<"\n\t\t\t---------------------------------"<<endl
         << "\n\t\t\tIngrese su opcion: ";

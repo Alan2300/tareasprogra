@@ -16,28 +16,33 @@ submenuInf::submenuInf()
         switch ( opcion ) {
             case clientes:
                 {
-                    cout<<"yayaya"<<endl;
+                    cout<<"Archivo creado exitosamente"<<endl;
+                    system("pause");
                 }
             break;
             case vendedores:
                 {
-                    cout<<"yayaya"<<endl;
+                    cout<<"Archivo creado exitosamente"<<endl;
+                    system("pause");
 
                 }
             break;
             case marcas:
                 {
-                    cout<<"yayaya"<<endl;
+                    cout<<"Archivo creado exitosamente"<<endl;
+                    system("pause");
                 }
             break;
             case lineas:
                 {
-                    cout<<"yayaya"<<endl;
+                    cout<<"Archivo creado exitosamente"<<endl;
+                    system("pause");
                 }
             break;
             case productos:
                 {
-                    cout<<"yayaya"<<endl;
+                    cout<<"Archivo creado exitosamente"<<endl;
+                    system("pause");
                 }
             break;
         }
@@ -84,11 +89,11 @@ int escribirOpcionInf(){
 	cout<<"\t\t\t |   Alan Abimael Galicia Ruano 9959213632 |"<<endl;
 	cout<<"\t\t\t--------------------------------------------"<<endl;
 
-    cout<< "\n\t\t\t  1. clientes" << endl
-        << "\t\t\t  2. vendedores" << endl
-        << "\t\t\t  3. marcas" << endl
-        << "\t\t\t  4. lineas" << endl
-        << "\t\t\t  5. productos" << endl
+    cout<< "\n\t\t\t  1. informe clientes" << endl
+        << "\t\t\t  2. informe vendedores" << endl
+        << "\t\t\t  3. informe marcas" << endl
+        << "\t\t\t  4. informe lineas" << endl
+        << "\t\t\t  5. informe productos" << endl
         << "\t\t\t  6. Regresar al menú general" << endl
         <<"\n\t\t\t---------------------------------"<<endl
         << "\n\t\t\tIngrese su opcion: ";
