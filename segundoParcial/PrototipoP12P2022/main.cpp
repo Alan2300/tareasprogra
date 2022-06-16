@@ -15,6 +15,7 @@
 using namespace std;
 int escribirOpcion();
 int escribirOpcionCatalogo();
+int escribirOpcionInforme();
 enum Opciones { catalogos = 1, procesos, informes, FIN };
 
 int main()
@@ -64,12 +65,44 @@ int main()
             break;
             case procesos:
                 {
-                    cout <<"yey :)";
+                    cout <<"procesos :)";
                 }
             break;
             case informes:
                 {
-                    cout <<"yey :)";
+                    enum OpcionesInformes { pelis = 1, sals, asento, cineses, clienteses, FIN };
+                    int opcionInformes=0;
+                    while (( opcionInformes = escribirOpcionInforme() ) != FIN)
+                    {
+                        switch ( opcionInformes ) {
+                        case pelis:
+                            {
+                                cout <<"bueno";
+                            }
+                            break;
+                        case sals:
+                            {
+                                cout <<"bueno";
+                            }
+                            break;
+                        case asento:
+                            {
+                                cout <<"bueno";
+                            }
+                            break;
+                        case cineses:
+                            {
+                                cout <<"bueno";
+                            }
+                            break;
+                        case clienteses:
+                            {
+                                cout <<"bueno";
+                            }
+                            break;
+                            break;
+                        }
+                    }
                 }
             break;
         }
@@ -112,4 +145,22 @@ int escribirOpcionCatalogo(){
     cin >> opcionMenuCat;
 
     return opcionMenuCat;
+}
+int escribirOpcionInforme(){
+    system("cls");
+    cout<<"\t\t\t---------------------------------"<<endl;
+    cout<<"\t\t\t |   ALAN ABIMAEL GALICIA RUANO; 9959-21-3632  |"<<endl;
+    cout<<"\t\t\t---------------------------------"<<endl;
+    cout<< "\n\n\t\t\t  1. Peliculas" << endl
+    << "\t\t\t  2. Salas" << endl
+    << "\t\t\t  3. Asientos" << endl
+    << "\t\t\t  4. cines" << endl
+    << "\t\t\t  5. clientes" << endl
+    << "\t\t\t  6. Regresar al menu principal" << endl
+    <<"\n\t\t\t---------------------------------"<<endl
+    << "\n\t\t\tIngrese su opcion: ";
+    int opcionMenuC;
+    cin >> opcionMenuC;
+
+    return opcionMenuC;
 }

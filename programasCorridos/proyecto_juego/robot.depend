@@ -70,3 +70,30 @@
 	<iostream>
 	<fstream>
 
+1648221315 source:c:\users\abima\proyectos\tareasgit\tareasprogra\programascorridos\proyecto_juego\main.cpp
+	<iostream>
+	"player.h"
+	"mapcell.h"
+	"gamemap.h"
+
+1648221315 c:\users\abima\proyectos\tareasgit\tareasprogra\programascorridos\proyecto_juego\include\player.h
+
+1648221315 c:\users\abima\proyectos\tareasgit\tareasprogra\programascorridos\proyecto_juego\include\mapcell.h
+
+1648221315 c:\users\abima\proyectos\tareasgit\tareasprogra\programascorridos\proyecto_juego\include\gamemap.h
+	"mapcell.h"
+
+1648221315 source:c:\users\abima\proyectos\tareasgit\tareasprogra\programascorridos\proyecto_juego\src\gamemap.cpp
+	"gamemap.h"
+	<iostream>
+	<fstream>
+
+1648221315 source:c:\users\abima\proyectos\tareasgit\tareasprogra\programascorridos\proyecto_juego\src\mapcell.cpp
+	"mapcell.h"
+	<iostream>
+
+1648221315 source:c:\users\abima\proyectos\tareasgit\tareasprogra\programascorridos\proyecto_juego\src\player.cpp
+	"player.h"
+	<iostream>
+	<fstream>
+
