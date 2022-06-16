@@ -73,9 +73,9 @@ int escribirOpcion(){
     cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
     cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
-    cout<<"\t\t\t---------------------------------"<<endl;
-	cout<<"\t\t\t |   Alan Abimael Galicia Ruano |"<<endl;
-	cout<<"\t\t\t---------------------------------"<<endl;
+    cout<<"\t\t\t--------------------------------------------"<<endl;
+	cout<<"\t\t\t |   Alan Abimael Galicia Ruano 9959213632 |"<<endl;
+	cout<<"\t\t\t--------------------------------------------"<<endl;
 
     cout<< "\n\t\t\t  1. Catálogo" << endl
         << "\t\t\t  2. Procesos" << endl

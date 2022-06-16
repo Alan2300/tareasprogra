@@ -36,9 +36,11 @@
 		</Compiler>
 		<Unit filename="include/DatosUsuario.h" />
 		<Unit filename="include/Usuarios.h" />
+		<Unit filename="include/submenuCat.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/DatosUsuario.cpp" />
 		<Unit filename="src/Usuarios.cpp" />
+		<Unit filename="src/submenuCat.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
