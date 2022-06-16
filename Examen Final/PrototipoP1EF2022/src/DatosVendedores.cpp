@@ -1,11 +1,11 @@
-#include "DatosClientes.h"
-#include "clientes.h"
+#include "DatosVendedores.h"
+#include "Vendedores.h"
 #include <cstring>
 #include <iostream>
 
 using std::string;
 
-DatosClientes::DatosClientes(int valorCodigo, string valorApellido, string valorNombre, string valorCorreo, int valorSueldo)
+DatosVendedores::DatosVendedores(int valorCodigo, string valorApellido, string valorNombre, string valorCorreo, int valorSueldo)
 {
     establecerCodigo( valorCodigo );
     establecerApellido( valorApellido );
@@ -14,20 +14,20 @@ DatosClientes::DatosClientes(int valorCodigo, string valorApellido, string valor
     establecerSueldo( valorSueldo );
 
 }
-int DatosClientes::obtenerCodigo() const
+int DatosVendedores::obtenerCodigo() const
 {
    return codigo;
 }
-void DatosClientes::establecerCodigo( int valorCodigo )
+void DatosVendedores::establecerCodigo( int valorCodigo )
 {
    codigo = valorCodigo;
 }
-string DatosClientes::obtenerApellido() const
+string DatosVendedores::obtenerApellido() const
 {
    return apellido;
 
 }
-void DatosClientes::establecerApellido( string apellidoString )
+void DatosVendedores::establecerApellido( string apellidoString )
 {
     const char *valorApellido = apellidoString.data();
     int longitud = strlen( valorApellido );
@@ -37,11 +37,11 @@ void DatosClientes::establecerApellido( string apellidoString )
     apellido[ longitud ] = '\0';
 
 }
-string DatosClientes::obtenerNombre() const
+string DatosVendedores::obtenerNombre() const
 {
    return nombre;
 }
-void DatosClientes::establecerNombre( string primerNombre )
+void DatosVendedores::establecerNombre( string primerNombre )
 {
     const char *valorNombre = primerNombre.data();
     int longitud = strlen( valorNombre );
@@ -51,19 +51,19 @@ void DatosClientes::establecerNombre( string primerNombre )
     primerNombre[ longitud ] = '\0';
 
 }
-int DatosClientes::obtenerSueldo() const
+int DatosVendedores::obtenerSueldo() const
 {
    return sueldo;
 }
-void DatosClientes::establecerSueldo( int valorSueldo )
+void DatosVendedores::establecerSueldo( int valorSueldo )
 {
    sueldo = valorSueldo;
 }
-string DatosClientes::obtenerCorreo() const
+string DatosVendedores::obtenerCorreo() const
 {
    return correo;
 }
-void DatosClientes::establecerCorreo( string correostring )
+void DatosVendedores::establecerCorreo( string correostring )
 {
     const char *valorCorreo = correostring.data();
     int longitud = strlen( valorCorreo );
@@ -73,7 +73,7 @@ void DatosClientes::establecerCorreo( string correostring )
     correostring[ longitud ] = '\0';
 }
 
-DatosClientes::~DatosClientes()
+DatosVendedores::~DatosVendedores()
 {
     //dtor
 }

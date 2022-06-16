@@ -1,0 +1,2 @@
+Codigo        Nombre          Dirección     Nit                 Telefono        
+1                 LopezGudiel     18Av            546874549      54872659       

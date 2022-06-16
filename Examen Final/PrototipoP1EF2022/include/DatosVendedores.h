@@ -1,13 +1,13 @@
-#ifndef DATOSCLIENTES_H
-#define DATOSCLIENTES_H
+#ifndef DATOSVENDEDORES_H
+#define DATOSVENDEDORES_H
 #include <iostream>
 using std::string;
 
-class DatosClientes
+class DatosVendedores
 {
     public:
-        virtual ~DatosClientes();
-        DatosClientes( int = 0, string = "", string = "", string = "", int=0);
+        virtual ~DatosVendedores();
+        DatosVendedores( int = 0, string = "", string = "", string = "", int=0);
 
         void establecerCodigo( int );
         int obtenerCodigo() const;
@@ -34,4 +34,4 @@ class DatosClientes
         int sueldo;
 };
 
-#endif // DATOSCLIENTES_H
+#endif // DATOSVENDEDORES_H

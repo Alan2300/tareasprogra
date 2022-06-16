@@ -1,4 +1,6 @@
 #include "submenuCat.h"
+#include "clientes.h"
+#include "Vendedores.h"
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -6,7 +8,7 @@
 using namespace std;
 
 int escribirOpcioncat();
-enum Opciones { clientes = 1, vendedores, marcas, lineas, productos, FIN };
+enum Opciones { cliente = 1, vendedor, marca, linea, producto, FIN };
 
 submenuCat::submenuCat()
 {
@@ -14,28 +16,27 @@ submenuCat::submenuCat()
     while (( opcion = escribirOpcioncat() ) != FIN)
     {
         switch ( opcion ) {
-            case clientes:
+            case cliente:
+                {
+                    clientes claseCliente;
+                }
+            break;
+            case vendedor:
+                {
+                    Vendedores clasevendedores;
+                }
+            break;
+            case marca:
                 {
                     cout<<"yayaya"<<endl;
                 }
             break;
-            case vendedores:
-                {
-                    cout<<"yayaya"<<endl;
-
-                }
-            break;
-            case marcas:
+            case linea:
                 {
                     cout<<"yayaya"<<endl;
                 }
             break;
-            case lineas:
-                {
-                    cout<<"yayaya"<<endl;
-                }
-            break;
-            case productos:
+            case producto:
                 {
                     cout<<"yayaya"<<endl;
                 }

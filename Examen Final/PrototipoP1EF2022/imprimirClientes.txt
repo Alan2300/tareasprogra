@@ -1,0 +1,2 @@
+Codigo        Nombre          Dirección     Nit                 Telefono        
+1                 JoseMartinex    17av            150487549      45987654       

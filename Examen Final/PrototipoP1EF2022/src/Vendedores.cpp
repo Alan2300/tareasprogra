@@ -1,5 +1,5 @@
-#include "clientes.h"
-#include "DatosClientes.h"
+#include "Vendedores.h"
+#include "DatosVendedores.h"
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -24,49 +24,47 @@ using std::setw;
 using std::setprecision;
 #include <cstdlib>
 
-int opcionEmp();
-void imprimirRegistroEmp( fstream& );
-void crearArchivoCreditoEmp();
-void mostrarLineaEmp( ostream&, const DatosClientes & );
-void nuevoRegistroEmp( fstream&);
-int obtenernCodigoEmp( const char * const );
-void modificarRegistroEmp( fstream& );
-void eliminarRegistroEmp( fstream& );
-void consultarRegistroEmp( fstream& );
-void mostrarLineaPantallaEmp( const DatosClientes &);
-int obtenernCodigoImp( const char * );
-int obtenernCodigoCon( const char * );
+int opcionCli();
+void imprimirRegistroV( fstream& );
+void crearArchivoCreditov();
+void mostrarLineaV( ostream&, const DatosVendedores & );
+void nuevoRegistroV( fstream&);
+int obtenernCodigov( const char * const );
+void modificarRegistroV( fstream& );
+void eliminarRegistroV( fstream& );
+void consultarRegistroV( fstream& );
+void mostrarLineaPantallaV( const DatosVendedores &);
 
 using namespace std;
 
-clientes::clientes()
+Vendedores::Vendedores()
 {
-    fstream creditoEntradaSalida( "client.dat", ios::in | ios::out | ios::binary);
+    fstream creditoEntradaSalida( "Vende.dat", ios::in | ios::out | ios::binary);
     if ( !creditoEntradaSalida ) {
         cerr << "No se pudo abrir el archivo." << endl;
-        crearArchivoCreditoEmp();
+        crearArchivoCreditov();
         cout <<  "Archivo creado satisfactoriamente, pruebe de nuevo\n";
         exit ( 1 );
     }
 
     enum Opciones { agregar = 1, nuevo, modificar, eliminar, mostrar, FIN };
     int opcion;
-    while ( ( opcion = opcionEmp() ) != FIN ) {
+    while ( ( opcion = opcionCli() ) != FIN ) {
         switch ( opcion ) {
             case agregar:
-                imprimirRegistroEmp( creditoEntradaSalida );
+                imprimirRegistroV( creditoEntradaSalida );
             break;
             case nuevo:
-                nuevoRegistroEmp( creditoEntradaSalida);
+                nuevoRegistroV( creditoEntradaSalida);
             break;
             case modificar:
-                modificarRegistroEmp( creditoEntradaSalida );
+                modificarRegistroV( creditoEntradaSalida );
             break;
             case eliminar:
-                eliminarRegistroEmp( creditoEntradaSalida );
+                eliminarRegistroV( creditoEntradaSalida );
             break;
             case mostrar:
-                consultarRegistroEmp( creditoEntradaSalida );
+                consultarRegistroV( creditoEntradaSalida );
             break;
             default:
             cerr << "Opcion incorrecta" << endl;
@@ -78,7 +76,7 @@ clientes::clientes()
 
    } //FIN WHILE
 }
-int opcionEmp(){
+int opcionCli(){
     system("cls");
 
     time_t now = time(0);
@@ -122,10 +120,10 @@ int opcionEmp(){
 	cout<<"\t\t\t\t     ----------------------------------------------"<<endl;
 
     cout<< "\n\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
-        << "\t\t\t 2. Agregar Cliente" << endl
-        << "\t\t\t 3. Modificar Cliente" << endl
-        << "\t\t\t 4. Eliminar Cliente" << endl
-        << "\t\t\t 5. Mostrar Lista de Cliente" << endl
+        << "\t\t\t 2. Agregar Vendedor" << endl
+        << "\t\t\t 3. Modificar Vendedor" << endl
+        << "\t\t\t 4. Eliminar Vendedor" << endl
+        << "\t\t\t 5. Mostrar Lista de Vendedor" << endl
         << "\t\t\t 6. Regresar al Menu Principal" << endl
         <<"\n\t\t\t-----------------------------------------------"<<endl
         << "\n\t\t\tIngrese su opcion: ";
@@ -135,9 +133,9 @@ int opcionEmp(){
 
    return opcionMenu;
 }
-void imprimirRegistroEmp( fstream &leerDeArchivo )
+void imprimirRegistroV( fstream &leerDeArchivo )
 {
-    ofstream archivoImprimirSalida( "imprimirClientes.txt", ios::out );
+    ofstream archivoImprimirSalida( "imprimirVendedores.txt", ios::out );
     if ( !archivoImprimirSalida ) {
         cerr << "No se pudo crear el archivo." << endl;
         exit( 1 );
@@ -148,18 +146,18 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
        << setw( 16 ) << "Telefono" << endl;
     leerDeArchivo.seekg( 0 );
 
-    DatosClientes empleados;
-    leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+    DatosVendedores empleados;
+    leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
 
     while ( !leerDeArchivo.eof() ) {
         if ( empleados.obtenerCodigo() != 0 )
-        mostrarLineaEmp( archivoImprimirSalida, empleados );
-        leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+        mostrarLineaV( archivoImprimirSalida, empleados );
+        leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
     } //FIN DE WHILE
     cout<<"\n";
     system("pause");
 } //FIN DE LA FUNCION -IMPRIMIR REGISTRO-
-void mostrarLineaEmp( ostream &salida, const DatosClientes &registro )
+void mostrarLineaV( ostream &salida, const DatosVendedores &registro )
 {
    salida << left << setw( 18 ) << registro.obtenerCodigo()
           << setw( 16 ) << registro.obtenerApellido().data()
@@ -168,25 +166,25 @@ void mostrarLineaEmp( ostream &salida, const DatosClientes &registro )
           << setw( 15 ) << registro.obtenerSueldo()<< endl;
 
 }//FIN -MOSTRARLINEA-
-void crearArchivoCreditoEmp()
+void crearArchivoCreditov()
 {
-    ofstream creditoSalida( "client.dat", ios::out | ios::binary );
+    ofstream creditoSalida( "Vende.dat", ios::out | ios::binary );
     if ( !creditoSalida ) {
       cerr << "No se pudo abrir el archivo." << endl;
       exit( 1 );
     }
-    DatosClientes empleadoEnBlanco;
+    DatosVendedores empleadoEnBlanco;
     for ( int i = 0; i < 100; i++ )
-        creditoSalida.write(reinterpret_cast< const char * >( &empleadoEnBlanco ), sizeof( DatosClientes ) );
+        creditoSalida.write(reinterpret_cast< const char * >( &empleadoEnBlanco ), sizeof( DatosVendedores ) );
     cout<<"\n";
     system("pause");
 }
-void nuevoRegistroEmp( fstream &insertarEnArchivo)
+void nuevoRegistroV( fstream &insertarEnArchivo)
 {
-    int codigo = obtenernCodigoEmp( "\nEscriba el Codigo del Cliente " );
-    insertarEnArchivo.seekg( ( codigo - 1 ) * sizeof( DatosClientes ) );
-    DatosClientes empleados;
-    insertarEnArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+    int codigo = obtenernCodigov( "\nEscriba el Codigo del Vendedor " );
+    insertarEnArchivo.seekg( ( codigo - 1 ) * sizeof( DatosVendedores ) );
+    DatosVendedores empleados;
+    insertarEnArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
 
     if ( empleados.obtenerCodigo() == 0 ) {
         char apellido[ 15 ];
@@ -194,13 +192,13 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo)
         char correo[ 15 ];
         int sueldo;
 
-        cout<<"Escriba el Nombre del Cliente: ";
+        cout<<"Escriba el Nombre del Vendedor: ";
         cin>> setw( 15 ) >> apellido;
-        cout<<"Escriba la dirección del Cliente: ";
+        cout<<"Escriba la dirección del Vendedor: ";
         cin>> setw( 10 ) >> nombre;
-        cout<<"Escriba el NIT del Cliente: ";
+        cout<<"Escriba el NIT del Vendedor: ";
         cin>> setw( 15 ) >> correo;
-        cout<<"Escriba el Telefono del Cliente: ";
+        cout<<"Escriba el Telefono del Vendedor: ";
         cin>> sueldo;
 
         empleados.establecerApellido( apellido );
@@ -209,16 +207,16 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo)
         empleados.establecerSueldo( sueldo );
 
         empleados.establecerCodigo( codigo );
-        insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosClientes ) );
-        insertarEnArchivo.write( reinterpret_cast< const char * >( &empleados ), sizeof( DatosClientes ) );
-        cout<<"\n Cliente agregado Exitosamente..."<<endl;
+        insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosVendedores ) );
+        insertarEnArchivo.write( reinterpret_cast< const char * >( &empleados ), sizeof( DatosVendedores ) );
+        cout<<"\n Vendedor agregado Exitosamente..."<<endl;
     } //FIN IF
     else
-        cerr << "El Cliente con codigo #" << codigo << " ya contiene informacion.\n" << endl;
+        cerr << "El Vendedor con codigo #" << codigo << " ya contiene informacion.\n" << endl;
     cout<<"\n";
     system("pause");
 } //FIN REGISTRO
-int obtenernCodigoEmp( const char * const indicador )
+int obtenernCodigov( const char * const indicador )
 {
    int codigo;
     do {
@@ -230,115 +228,115 @@ int obtenernCodigoEmp( const char * const indicador )
    return codigo;
 
 } //FIN -OBTENERCODIGO-
-void modificarRegistroEmp( fstream &actualizarArchivo )
+void modificarRegistroV( fstream &actualizarArchivo )
 {
     int opcionAc=0;
     cout<<"\nEscoja opcion a Actualizar: \n 1. telefono\n 2. direccion\n 3. nombre \n 4. nit\n R - ";
     cin>>opcionAc;
 
     if (opcionAc == 1){
-        int codigo = obtenernCodigoEmp( "\nEscriba el codigo del Cliente que desea Modifcar" );
+        int codigo = obtenernCodigov( "\nEscriba el codigo del Vendedor que desea Modifcar" );
 
-        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosClientes ));
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosVendedores ));
 
-        DatosClientes empleados;
-        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+        DatosVendedores empleados;
+        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
 
         if (empleados.obtenerCodigo() != 0 ) {
-            mostrarLineaEmp( cout, empleados );
+            mostrarLineaV( cout, empleados );
             cout << "Escriba el nuevo telefono: ";
             int cambiosu;
             cin >> cambiosu;
             double sueldoAnterior = empleados.obtenerSueldo();
             empleados.establecerSueldo( cambiosu );
-            mostrarLineaEmp( cout, empleados );
+            mostrarLineaV( cout, empleados );
 
-            actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosClientes ));
+            actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosVendedores ));
 
-            actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosClientes ) );
+            actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosVendedores ) );
         }
 
     }else if (opcionAc== 2){
-        int codigo = obtenernCodigoEmp( "\nEscriba el codigo del cliente que desea Modifcar" );
+        int codigo = obtenernCodigov( "\nEscriba el codigo del cliente que desea Modifcar" );
 
-        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosClientes ));
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosVendedores ));
 
-        DatosClientes empleados;
-        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+        DatosVendedores empleados;
+        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
 
         //ACTUALIZAR EL REGISTRO
         if (empleados.obtenerCodigo() != 0 ) {
-            mostrarLineaEmp( cout, empleados );
+            mostrarLineaV( cout, empleados );
             cout << "\nEscriba la nueva direccion: ";
             string nombre;
             cin >> nombre;
 
             string nombreAnterior = empleados.obtenerNombre();
             empleados.establecerNombre( nombre );
-            mostrarLineaEmp( cout, empleados );
+            mostrarLineaV( cout, empleados );
 
-            actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosClientes ));
-            actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosClientes ) );
+            actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosVendedores ));
+            actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosVendedores ) );
         }
     }else if(opcionAc == 3){
-        int codigo = obtenernCodigoEmp( "\nEscriba el codigo del cliente que desea Modifcar" );
+        int codigo = obtenernCodigov( "\nEscriba el codigo del cliente que desea Modifcar" );
 
-        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosClientes ));
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosVendedores ));
 
-        DatosClientes empleados;
-        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+        DatosVendedores empleados;
+        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
 
         if (empleados.obtenerCodigo() != 0 ) {
-                mostrarLineaEmp( cout, empleados );
+                mostrarLineaV( cout, empleados );
                 cout << "\nEscriba el nuevo nombre: ";
                 string apellido;
                 cin >> apellido;
 
                 string apellidoAnterior = empleados.obtenerApellido();
                 empleados.establecerApellido( apellido );
-                mostrarLineaEmp( cout, empleados );
+                mostrarLineaV( cout, empleados );
 
-                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosClientes ));
+                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosVendedores ));
 
-                actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosClientes ) );
+                actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosVendedores ) );
         }
     }else if(opcionAc == 4){
-        int codigo = obtenernCodigoEmp( "\nEscriba el codigo del Cliente que desea Modifcar" );
+        int codigo = obtenernCodigov( "\nEscriba el codigo del Vendedor que desea Modifcar" );
 
-        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosClientes ));
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosVendedores ));
 
-        DatosClientes empleados;
-        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+        DatosVendedores empleados;
+        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
 
         if (empleados.obtenerCodigo() != 0 ) {
-                mostrarLineaEmp( cout, empleados );
+                mostrarLineaV( cout, empleados );
                 cout << "\nEscriba el nuevo NIT: ";
                 string correo;
                 cin >> correo;
 
                 string correoAnterior = empleados.obtenerCorreo();
                 empleados.establecerCorreo( correo );
-                mostrarLineaEmp( cout, empleados );
+                mostrarLineaV( cout, empleados );
 
-                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosClientes ));
+                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosVendedores ));
 
-                actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosClientes ) );
+                actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosVendedores ) );
         }
     }
 cout<<"\n";
  system("pause");
 } //FIN DE -ACTUALIZAR REGISTRO-
-void eliminarRegistroEmp( fstream &eliminarDeArchivo )
+void eliminarRegistroV( fstream &eliminarDeArchivo )
 {
-    int codigo = obtenernCodigoEmp( "\nEscriba el codigo del Cliente a Eliminar" );
-    eliminarDeArchivo.seekg( ( codigo - 1 ) * sizeof( DatosClientes ) );
-    DatosClientes empleados;
-    eliminarDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+    int codigo = obtenernCodigov( "\nEscriba el codigo del Vendedor a Eliminar" );
+    eliminarDeArchivo.seekg( ( codigo - 1 ) * sizeof( DatosVendedores ) );
+    DatosVendedores empleados;
+    eliminarDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
 
     if ( empleados.obtenerCodigo() != 0 ) {
-        DatosClientes clienteEnBlanco;
-        eliminarDeArchivo.seekp( ( codigo - 1 ) * sizeof( DatosClientes ) );
-        eliminarDeArchivo.write( reinterpret_cast< const char * >( &clienteEnBlanco ), sizeof( DatosClientes ) );
+        DatosVendedores clienteEnBlanco;
+        eliminarDeArchivo.seekp( ( codigo - 1 ) * sizeof( DatosVendedores ) );
+        eliminarDeArchivo.write( reinterpret_cast< const char * >( &clienteEnBlanco ), sizeof( DatosVendedores ) );
 
       cout << " Cuenta #" << codigo << " eliminada Exitosamente.\n";
 
@@ -350,24 +348,24 @@ void eliminarRegistroEmp( fstream &eliminarDeArchivo )
 cout<<"\n";
  system("pause");
 } //FIN -ELIMINARREGISTRO-
-void consultarRegistroEmp( fstream &leerDeArchivo )
+void consultarRegistroV( fstream &leerDeArchivo )
 
 {
     cout << left << setw( 10 ) << "\nCodigo" << setw( 14 ) << " Nombre" << setw( 12 ) << " Dirección" << setw( 16 ) << " NIT" << setw( 15 )
     << " telefono" << endl;
     leerDeArchivo.seekg( 0 );
-    DatosClientes empleados;
-    leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+    DatosVendedores empleados;
+    leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
     while ( !leerDeArchivo.eof() ) {
         if ( empleados.obtenerCodigo() != 0 )
-            mostrarLineaPantallaEmp(empleados);
-            leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosClientes ) );
+            mostrarLineaPantallaV(empleados);
+            leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosVendedores ) );
 
    } //FIN WHILE
     cout<<"\n";
     system("pause");
 } //FIN CONSULTAR REGISTRO
-void mostrarLineaPantallaEmp( const DatosClientes &registro )
+void mostrarLineaPantallaV( const DatosVendedores &registro )
 {
    cout << left <<" "<< setw( 10 ) << registro.obtenerCodigo()
           << setw( 14 ) << registro.obtenerApellido().data()
@@ -377,7 +375,7 @@ void mostrarLineaPantallaEmp( const DatosClientes &registro )
 
 } //FIN -MOSTRARLINEAENOANTALLA-
 
-clientes::~clientes()
+Vendedores::~Vendedores()
 {
     //dtor
 }
