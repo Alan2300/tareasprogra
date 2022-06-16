@@ -1,17 +1,17 @@
-#include "submenuPro.h"
+#include "submenuInf.h"
 #include <iostream>
 #include <ctime>
 #include <vector>
 
 using namespace std;
 
-int escribirOpcionpro();
+int escribirOpcionInf();
 enum Opciones { clientes = 1, vendedores, marcas, lineas, productos, FIN };
 
-submenuPro::submenuPro()
+submenuInf::submenuInf()
 {
     int opcion=0;
-    while (( opcion = escribirOpcionpro() ) != FIN)
+    while (( opcion = escribirOpcionInf() ) != FIN)
     {
         switch ( opcion ) {
             case clientes:
@@ -44,7 +44,7 @@ submenuPro::submenuPro()
     }
 }
 
-int escribirOpcionpro(){
+int escribirOpcionInf(){
     system("cls");
     system("color F");
 
@@ -99,7 +99,7 @@ int escribirOpcionpro(){
 
 }
 
-submenuPro::~submenuPro()
+submenuInf::~submenuInf()
 {
     //dtor
 }

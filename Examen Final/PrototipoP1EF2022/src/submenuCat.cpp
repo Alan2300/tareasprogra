@@ -2,7 +2,6 @@
 #include <iostream>
 #include <ctime>
 #include <vector>
-#include "Usuarios.h"
 
 using namespace std;
 

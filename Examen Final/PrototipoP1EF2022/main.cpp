@@ -4,6 +4,7 @@
 #include "Usuarios.h"
 #include "submenuCat.h"
 #include "submenuPro.h"
+#include "submenuInf.h"
 
 using namespace std;
 
@@ -30,7 +31,7 @@ int main()
             break;
             case informes:
                 {
-                    cout<<"yayaya"<<endl;
+                    submenuInf claseMenuInf;
                 }
             break;
         }
