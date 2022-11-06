@@ -34,13 +34,37 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/DatosClientes.h" />
+		<Unit filename="include/DatosLineas.h" />
+		<Unit filename="include/DatosMarcas.h" />
+		<Unit filename="include/DatosProducto.h" />
 		<Unit filename="include/DatosUsuario.h" />
+		<Unit filename="include/DatosVendedores.h" />
+		<Unit filename="include/Lineas.h" />
+		<Unit filename="include/Marcas.h" />
+		<Unit filename="include/Producto.h" />
 		<Unit filename="include/Usuarios.h" />
+		<Unit filename="include/Vendedores.h" />
+		<Unit filename="include/clientes.h" />
 		<Unit filename="include/submenuCat.h" />
+		<Unit filename="include/submenuInf.h" />
+		<Unit filename="include/submenuPro.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/DatosClientes.cpp" />
+		<Unit filename="src/DatosLineas.cpp" />
+		<Unit filename="src/DatosMarcas.cpp" />
+		<Unit filename="src/DatosProducto.cpp" />
 		<Unit filename="src/DatosUsuario.cpp" />
+		<Unit filename="src/DatosVendedores.cpp" />
+		<Unit filename="src/Lineas.cpp" />
+		<Unit filename="src/Marcas.cpp" />
+		<Unit filename="src/Producto.cpp" />
 		<Unit filename="src/Usuarios.cpp" />
+		<Unit filename="src/Vendedores.cpp" />
+		<Unit filename="src/clientes.cpp" />
 		<Unit filename="src/submenuCat.cpp" />
+		<Unit filename="src/submenuInf.cpp" />
+		<Unit filename="src/submenuPro.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
